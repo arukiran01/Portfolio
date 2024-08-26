@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./contact.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h3><span style="color:red">A</span>R</h3>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="mainicon">
+        </label>
+        <nav>
+            
+            <a href="./index.html" >About</a>
+            <a href="./skills.html">Skills</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="image">
+                    <img src="./contact1.png" alt="contact" />
+                </div>
+                <div class="contact-left">
+                    <h1 class="underline">Get in Touch</h1>
+                    <p><i class="fas fa-phone"></i> +91 9553838811</p>
+                    <p><i class="fas fa-envelope"></i> arukiranreddy@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> YS Banjara, Vemsoor Mandal,<br>Khammam district, 507164.</p>
+                    <div class="social">
+                        <a href="https://github.com/arukiran01" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fas fa-code"></i></a>
+                        <a href="https://www.linkedin.com/in/arukiran-reddy-136b262a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i> 
+                            <input type="text" name="first_name" placeholder="First Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="last_name" placeholder="Last Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="text" name="phone_number" placeholder="Phone Number" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-comment"></i>
+                            <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw2AHoQrqqmfOb45z31wzErGh09A611QJWoDrrzTYX07Z8U2V2LNM6-QTQXX0kYukubBw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=" "
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>

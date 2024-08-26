@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            max-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            padding: 1.7rem 1rem;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 80%;
+            margin: auto;
+            position: fixed;
+            top: 0; /* Ensures the header stays at the top */
+            left: 50%; /* Centers the header */
+            transform: translateX(-50%); /* Centers the header correctly */
+            z-index: 1000; /* Ensures it stays above other content */
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0,);
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            text-transform: uppercase;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all .3s ease-in-out;
+            border-radius: 10px;
+            background: transparent;
+            box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+            animation: pulse 1.5s infinite;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 0.4rem 1.0rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all .3s ease-in-out;
+        }
+
+
+        nav a.active,
+        nav a:hover {
+            color: #00E8F8;
+            box-shadow: 0 0 20px rgba(0, 232, 248, 0.6);
+            transition: all .3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #00E8F8;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Main Section */
+        section {
+            margin: 0.5rem 8.5rem;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+
+        .main h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all .3s ease-in-out;
+            display: inline-block;
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #00E8F8;
+            text-shadow: 0 0 10px #00E8F8;
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .9rem;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all .3s ease-in-out;
+            text-align: left;
+            width: fit-content; /* Adjust the width to fit the content */
+            max-width: 50%; /* Or any desired max width */
+            margin-left: 10px; /* Align the block to the left */
+            margin-right: none; /* Center align the block */
+        }
+        
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+            margin-left: 120px;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 2rem;
+            border: 3.0px rgba(255, 255, 255, 0.8);
+            border-radius: 100%;
+            padding: .35rem;
+            text-align: center;
+            width: 42px;
+        }
+
+        .social a:hover {
+            box-shadow: 0 0 20px #00E8F8;
+            transition: all .3s ease-in-out;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            position: absolute;
+            right: 200px;
+        }
+
+        .image-container img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            border: 8px solid rgba(255, 255, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        .cv-button-container {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: left;
+            align-items: start;
+            margin-left: 150px;
+        }
+
+        .cv-button {
+            
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            transition: all .3s ease-in-out;
+        }
+
+        .cv-button:hover {
+            color: #feffff;
+            box-shadow: 0 0 30px #00E8F8;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 232, 248, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(0, 232, 248, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 232, 248, 0);
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.8);
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+        }

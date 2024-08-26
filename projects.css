@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    padding: 1.7rem 1rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(133, 216, 231, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: .97rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 0.4rem 1.0rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all .3s ease-in-out;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00E8F8;
+    box-shadow: 0 0 20px rgba(0, 232, 248, 0.6);
+    transition: all .3s ease-in-out;
+}
+
+#click {
+    display: none;
+}
+
+.section {
+    position: relative;
+}
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 100px; 
+    padding: 0px 10px;/* Adjust padding to account for fixed navbar */
+}
+
+.small  {
+    text-align: center;
+    margin-top: 10%;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ffffff;
+    color: #d91132;
+    font-size: 26px;
+}
+.myprojects {
+    padding: 0 10px;
+    margin: 20px auto;
+    max-width: 1200px; 
+    transition: transform 0.3s ease-in-out;
+}
+.myprojects:hover {
+    transform: scale(1.02);
+}
+.content {
+    box-sizing: border-box;
+    box-shadow: -4px 5px 7px 0px darkgrey;
+    border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+.box {
+    display: flex;
+}
+
+.content .box img {
+    box-shadow: 1px 0 0 1px darkgray;
+    border: 1px solid #f8f8f8;
+    width: 250px;
+    height: 120px;
+    margin: 5px;
+}
+
+.box p {
+    color: white;
+    font-family: lucida 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.icons i {
+    font-size: 36px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+.icons i.bxl-html5 {
+    color: #E34C26; /* HTML5 color */
+}
+
+.icons i.bxl-css3 {
+    color: #1572B6; /* CSS3 color */
+}
+
+.icons i.bxl-javascript {
+    color: #F7DF1E; /* JavaScript color */
+}
+
+.icons i.bxl-bootstrap {
+    color: #7952B3; /* Bootstrap color */
+}
+
+.icons i.bxl-git {
+    color: #F05032; /* Git color */
+}
+
+
+
+
+/* skills */
+.myskills {
+    position: fixed;
+    background-color: #0a0909;
+}
+
+.test {
+    display: flex;
+}
+
+.skillspara {
+    font-family: cursive;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.frontend1, .backend1, .others1 {
+    border-radius: 10px;
+    box-shadow: 1px 0 0 1px darkgray;
+    background-color: aliceblue;
+    height: 250px;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.frontend1 button, .backend1 button, .others
+    .frontend1 button,
+.backend1 button,
+.others1 button {
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00E8F8;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.frontend1 button:hover,
+.backend1 button:hover,
+.others1 button:hover {
+    background-color: #008CBA;
+}
+
+.frontend1 ul,
+.backend1 ul,
+.others1 ul {
+    list-style: none;
+    padding: 20px;
+    color: #000000;
+}
+
+.frontend1 ul li,
+.backend1 ul li,
+.others1 ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skillsheader {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00E8F8;
+}
+
+.eachrow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.content {
+    flex: 1 1 45%;
+    margin: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.content.lastone {
+    margin-bottom: 100px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .content .box img {
+        width: 200px;
+        height: 100px;
+    }
+
+    .icons i {
+        font-size: 30px;
+    }
+
+    .frontend1,
+    .backend1,
+    .others1 {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .content .box img {
+        width: 150px;
+        height: 80px;
+    }
+
+    .icons i {
+        font-size: 24px;
+    }
+}
